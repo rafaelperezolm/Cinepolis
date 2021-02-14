@@ -1,0 +1,32 @@
+<resources>
+
+    <string name="app_name">Cinepolis</string>
+    <string name="app_enterprise">Cinépolis de México, S.A. de C.V.</string>
+    <string name="app_construction">Activity en Construcción</string>
+    <string name="app_image_description">null</string>
+
+    <!-- Login -->
+    <string name="login_title_text">Inicio de Sesión</string>
+    <string name="login_subtitle_text">Utiliza tu cuenta para comenzar</string>
+    <string name="login_user_text">Usuario</string>
+    <string name="login_password_text">Contraseña</string>
+    <string name="login_username_error">Ingresa un usuario</string>
+    <string name="login_password_error">Ingresa una contraseña</string>
+    <string name="login_or_text">o</string>
+    <string name="login_google_text">Inicia sesión con Google</string>
+    <string name="login_email_text">Inicia sesión con E-Mail</string>
+    <string name="login_login_text">Acceder</string>
+    <string name="login_reg_text">¿Aun no tienes cuenta?</string>
+    <string name="login_reg_link">Regístrate</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <!-- Movie -->
+    <string name="movie_movies_text">Películas</string>
+
+    <!-- Movie -->
+    <string name="profile_user_text">Perfil</string>
+
+
+    <!-- Connection -->
+
+</resources>

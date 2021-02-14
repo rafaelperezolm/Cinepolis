@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".ui.login.LoginActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/login_hor_guide_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/login_imv_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:contentDescription="@string/app_image_description"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/c_logo" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_ver_guide_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_ver_guide_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.95" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_hor_guide_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.06" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/login_hor_guide_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.96" />
+
+    <TextView
+        android:id="@+id/login_txv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/login_title_text"
+        android:textColor="@color/colorText"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/login_ver_guide_right"
+        app:layout_constraintStart_toStartOf="@+id/login_ver_guide_left"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/login_txv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/login_subtitle_text"
+        android:textColor="@color/colorSubText"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/login_ver_guide_right"
+        app:layout_constraintStart_toStartOf="@+id/login_ver_guide_left"
+        app:layout_constraintTop_toBottomOf="@+id/login_txv_title" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/login_amv_preview"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toStartOf="@+id/login_ver_guide_right"
+        app:layout_constraintStart_toStartOf="@+id/login_ver_guide_left"
+        app:layout_constraintTop_toBottomOf="@+id/login_txv_subtitle"
+        app:lottie_autoPlay="true"
+        app:lottie_fileName="login_anim.json"
+        app:lottie_loop="true"
+        app:lottie_speed="2" />
+
+    <Button
+        android:id="@+id/login_btn_google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/login_google_text"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/login_ver_guide_right"
+        app:layout_constraintStart_toStartOf="@+id/login_ver_guide_left"
+        app:layout_constraintTop_toBottomOf="@+id/login_amv_preview" />
+
+    <TextView
+        android:id="@+id/login_txv_or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_or_text"
+        android:textAlignment="center"
+        android:textColor="@color/colorSubText"
+        app:layout_constraintEnd_toEndOf="@+id/login_btn_email"
+        app:layout_constraintStart_toStartOf="@+id/login_btn_email"
+        app:layout_constraintTop_toBottomOf="@+id/login_btn_google" />
+
+    <Button
+        android:id="@+id/login_btn_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/login_email_text"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="@+id/login_btn_google"
+        app:layout_constraintStart_toStartOf="@+id/login_btn_google"
+        app:layout_constraintTop_toBottomOf="@+id/login_txv_or" />
+
+    <TextView
+        android:id="@+id/login_txv_reg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/login_reg_text"
+        android:textColor="@color/colorSubText"
+        app:layout_constraintStart_toStartOf="@+id/login_btn_email"
+        app:layout_constraintTop_toBottomOf="@+id/login_btn_email" />
+
+    <TextView
+        android:id="@+id/login_txv_reg_link"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/login_reg_link"
+        android:textColor="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="@+id/login_btn_email"
+        app:layout_constraintTop_toBottomOf="@+id/login_btn_email" />
+
+    <TextView
+        android:id="@+id/login_txv_enterprise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_enterprise"
+        android:textColor="@color/colorText"
+        app:layout_constraintBottom_toTopOf="@+id/login_hor_guide_down"
+        app:layout_constraintEnd_toStartOf="@+id/login_ver_guide_right"
+        app:layout_constraintStart_toStartOf="@+id/login_ver_guide_left" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
